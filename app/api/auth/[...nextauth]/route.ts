@@ -10,7 +10,10 @@ const client = globalThis.prisma || new PrismaClient()
 if (process.env.NODE_ENV !== "production") globalThis.prisma = client
 
 export const authOptions:NextAuthOptions = {
-  debug: true,
+  // debug: true,
+  // session: {
+  //   strategy: 'jwt',
+  // },
   adapter: PrismaAdapter(client),
   providers: [
     GoogleProvider({
@@ -26,5 +29,6 @@ export const authOptions:NextAuthOptions = {
   }
 }
 
-export default NextAuth(authOptions);
+const handler = NextAuth(authOptions);
+export {handler as GET, handler as POST}
 

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Login from "./Login";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../../pages/api/auth/[...nextauth]"
 import styles from './Nav.module.scss'
+import { authOptions } from "../api/auth/[...nextauth]/route";
 
 export default async function Nav() {
   const session = await getServerSession(authOptions);
