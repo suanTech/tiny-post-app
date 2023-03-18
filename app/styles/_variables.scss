@@ -1,0 +1,40 @@
+
+// colors
+$clr-bg: #f4fbfb;
+$clr-primary: #2a2a3c;
+$clr-secondary: #59698a;
+$clr-grey: #d4d4da;
+$clr-accent: #20b839;
+
+// font size
+
+$h1-font-sizes: (
+  null : 26px,
+  768px: 32px
+);
+$h2-font-sizes: (
+  null: 20px,
+  768px: 24px,
+);
+$h3-font-sizes: (
+  null: 18px,
+  768px: 20px
+);
+$bodyS-font-sizes: (
+  null: 16px,
+  768px: 20px,
+);
+$bodyXS-font-sizes: (
+  null: 14px,
+  768px: 18px,
+);
+
+
+// margin
+
+$body-margins: (
+  null: 0 2rem,
+  768px: 0 4rem,
+  1024px: 0 6rem
+)
+

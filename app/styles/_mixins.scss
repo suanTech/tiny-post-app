@@ -1,0 +1,38 @@
+@mixin font-size($font-sizes-map) {
+  @each $breakpoint, $font-size in $font-sizes-map {
+    @if $breakpoint == null {
+      font-size: $font-size;
+    }
+    @else {
+      @media screen and (min-width: $breakpoint) {
+        font-size: $font-size;
+      }
+    }
+  }
+};
+
+@mixin margin-size($margin-sizes-map) {
+  @each $breakpoint, $margin-size in $margin-sizes-map {
+    @if $breakpoint == null {
+      margin: $margin-size;
+    }
+    @else {
+      @media screen and (min-width: $breakpoint) {
+        margin: $margin-size;
+      }
+    }
+  }
+}
+
+@mixin flexy(
+  $disp: flex,
+  $dir: row,
+  $just: null,
+  $wrap: wrap,
+  $algn: center) {
+    display: $disp;
+    flex-direction: $dir;
+    justify-content: $just;
+    flex-wrap: $wrap;
+    align-items: $algn;
+  }
