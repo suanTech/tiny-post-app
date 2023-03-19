@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Login from "./Login";
+import Logged from "./Logged";
 import { getServerSession } from "next-auth";
 import styles from './Nav.module.scss'
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
 export default async function Nav() {
   const session = await getServerSession(authOptions);
@@ -10,10 +11,11 @@ export default async function Nav() {
   return (
     <nav className={styles.nav}>
       <Link href="/"> 
-        <h1>Send it.</h1>
+        <h1>Tiny post.</h1>
       </Link>
       <ul>
-        <Login />
+        {!session?.user && <Login />}
+        {session?.user && <Logged image={session.user?.image}/>}
       </ul>
     </nav>
   );

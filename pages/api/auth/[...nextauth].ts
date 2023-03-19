@@ -1,19 +1,9 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google"
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import { PrismaClient } from "@prisma/client";
-declare global {
-  var prisma: PrismaClient | undefined
-}
-
-const client = globalThis.prisma || new PrismaClient()
-if (process.env.NODE_ENV !== "production") globalThis.prisma = client
+import client from "@/prisma/client";
 
 export const authOptions:NextAuthOptions = {
-  // debug: true,
-  // session: {
-  //   strategy: 'jwt',
-  // },
   adapter: PrismaAdapter(client),
   providers: [
     GoogleProvider({
@@ -29,6 +19,4 @@ export const authOptions:NextAuthOptions = {
   }
 }
 
-const handler = NextAuth(authOptions);
-export {handler as GET, handler as POST}
-
+export default NextAuth(authOptions);

@@ -3,8 +3,8 @@
 .nav {
   @include flexy($dir: row, $just: space-between);
   padding: 2em 0;
-  ul {
-    @include flexy($just: center);
-    gap: 10px;
+  li {
+    @include flexy($just: center, $algn: center);
+    gap: 20px;
   }
 }

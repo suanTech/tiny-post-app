@@ -1,12 +1,5 @@
-@import './styles/variables.scss';
-@import './styles/mixins.scss';
-
-// :root {
-
-// }
-// @media (prefers-color-scheme: dark) {
-
-// }
+@import './variables.scss';
+@import './mixins.scss';
 
 * {
   box-sizing: border-box;
@@ -18,7 +11,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  color: $clr-primary;
+  color: $clr-body;
 }
 
 body {
@@ -47,6 +40,7 @@ li {
 }
 button {
   cursor: pointer;
+  font-family: inherit;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,0 +1,34 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.form {
+  background-color: $clr-light;
+  margin: 1.5em 0;
+  padding: 1.5em;
+  border-radius: .5em;
+}
+.textDiv {
+  @include flexy($dir: column, $just: flex-start);
+}
+.textarea {
+  width: 100%;
+  padding: 1em;
+  margin: 1em 0;
+  background: $clr-bg;
+  border: none;
+  border-radius: .5em;
+  @include font-size($h3-font-sizes);
+  &:focus {
+    outline: solid thin $clr-accent;
+  }
+}
+.buttonDiv {
+  @include flexy($just: space-between);
+}
+.p {
+  font-weight: bold;
+  @include font-size($bodyXS-font-sizes);
+}
+.warning {
+  color: $clr-warning;
+}

@@ -1,0 +1,20 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+button {
+  @include font-size($bodyS-font-sizes);
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: .5em;
+  color: #fff;
+  &:disabled {
+    opacity: .6;
+  }
+}
+.primary {
+  background: $clr-primary;
+}
+.secondary {
+  background: $clr-secondary;
+  border-radius: 1em;
+}

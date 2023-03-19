@@ -1,14 +1,14 @@
 "use client";
 
 import { signIn } from "next-auth/react";
-import styles from "./Login.module.scss";
+import Button from "../components/UI/Button";
 
 export default function Login() {
   return (
     <li>
-      <button onClick={() => signIn()} className={styles.button}>
+      <Button onClick={() => signIn()} className='primary'>
         Sign In
-      </button>
+      </Button>
     </li>
   );
 }
