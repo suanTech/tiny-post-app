@@ -1,0 +1,27 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.wrapperDiv {
+  background-color: $clr-light;
+  padding: 1.5em;
+  margin: 1em 0;
+  border-radius: 0.5em;
+  .authorDiv {
+    @include flexy();
+    gap: 1em;
+    font-weight: bold;
+    & > p {
+      @include font-size($bodyXS-font-sizes);
+    }
+  };
+  .postDiv {
+    margin: 1.5em 0;
+  };
+  .commentDiv {
+    @include flexy();
+    gap: .5em;
+    p {
+      font-weight: bold;
+    }
+  }
+}

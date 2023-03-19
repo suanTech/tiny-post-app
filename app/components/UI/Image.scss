@@ -4,5 +4,9 @@
 .avatar {
   display: block;
   width: auto;
-  height: 2.5rem;
+  height: 2.5em;
+  &.small {
+    height: 2em;
+    width: auto;
+  }
 }
