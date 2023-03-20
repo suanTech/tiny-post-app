@@ -3,7 +3,19 @@ import Image from "next/image"
 import Link from "next/link"
 import styles from './Post.module.scss'
 
-export default function Post({avatar, name, postTitle, id}) {
+type PostProps = {
+  avatar: string,
+  name: string,
+  postTitle: string,
+  id: string,
+  comments?: {
+    createdAt: string;
+    id: string;
+    postId: string;
+    userId: string;
+  }[]
+}
+export default function Post({avatar, name, postTitle, id, comments}: PostProps) {
   return (
     <div className={styles.wrapperDiv}>
       <div className={styles.authorDiv}>
@@ -21,7 +33,7 @@ export default function Post({avatar, name, postTitle, id}) {
       </div>
       <div className={styles.commentDiv}>
         <Link href={`/post/${id}`}>
-          <p>Comments</p>
+          <p>{comments!.length} Comments</p>
         </Link>
       </div>
     </div>

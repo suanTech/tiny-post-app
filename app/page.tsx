@@ -4,6 +4,7 @@ import AddPost from "./components/AddPost";
 import styles from "./page.module.scss";
 import { useQuery } from "@tanstack/react-query";
 import Post from "./components/Post";
+import { PostType } from "@/app/types/Posts";
 
 // Fetch all posts
 const allPosts = async () => {
@@ -12,18 +13,18 @@ const allPosts = async () => {
 };
 
 export default function Home() {
-  const { data, error, isLoading } = useQuery({
+  const { data, error, isLoading } = useQuery<PostType[]>({
     queryFn: allPosts,
     queryKey: ["posts"],
   });
   if (error) return error;
   if (isLoading) return "Loading...";
-  console.log(data);
   return (
     <main className={styles.main}>
       <AddPost />
       {data?.map((post) => (
         <Post
+          comments={post.comments}
           key={post.id}
           name={post.user.name}
           avatar={post.user.image}

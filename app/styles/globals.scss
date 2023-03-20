@@ -33,7 +33,10 @@ h3 {
   @include font-size($h3-font-sizes)
 }
 p {
-  @include font-size($bodyS-font-sizes)
+  @include font-size($bodyS-font-sizes);
+  &.small {
+    @include font-size($bodyXS-font-sizes);
+  }
 }
 li {
   list-style: none;
@@ -41,6 +44,9 @@ li {
 button {
   cursor: pointer;
   font-family: inherit;
+}
+.warning {
+  color:  $clr-warning;
 }
 
 @media (prefers-color-scheme: dark) {

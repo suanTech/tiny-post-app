@@ -10,9 +10,6 @@
     @include flexy();
     gap: 1em;
     font-weight: bold;
-    & > p {
-      @include font-size($bodyXS-font-sizes);
-    }
   };
   .postDiv {
     margin: 1.5em 0;
