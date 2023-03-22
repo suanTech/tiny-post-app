@@ -6,7 +6,7 @@ import Button from "../UI/Button";
 export default function Login() {
   return (
     <li>
-      <Button onClick={() => signIn()} className='primary'>
+      <Button onClick={() => signIn()} className='login'>
         Sign In
       </Button>
     </li>

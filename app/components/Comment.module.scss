@@ -1,0 +1,17 @@
+@import '../styles/mixins';
+@import '../styles/variables';
+
+.wrapperDiv {
+  margin: 2em 0;
+}
+.div {
+  @include flexy($dir: row, $algn: center);
+  gap: 1.3em;
+  margin: 1em 0;
+  h3 {
+    margin: .5em 0; 
+  }
+  p {
+    @include font-size($bodyXS-font-sizes);
+  }
+}

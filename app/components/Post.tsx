@@ -29,11 +29,11 @@ export default function Post({avatar, name, postTitle, id, comments}: PostProps)
         <p>{name}</p>
       </div>
       <div className={styles.postDiv}>
-        <p>{postTitle}</p>
+        <h3>{postTitle}</h3>
       </div>
       <div className={styles.commentDiv}>
         <Link href={`/post/${id}`}>
-          <p>{comments!.length} Comments</p>
+          <p>{comments?.length || 0} Comments</p>
         </Link>
       </div>
     </div>

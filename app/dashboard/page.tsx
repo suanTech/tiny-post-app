@@ -11,7 +11,7 @@ export default async function Dashboard() {
   }
   return (
     <main>
-      <h2 className={styles.h2}>Welcome back! {session.user?.name}</h2>
+      <h3 className={styles.h3}>Welcome back! {session.user?.name}</h3>
       <MyPosts/>
     </main>
   )

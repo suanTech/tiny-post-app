@@ -1,0 +1,26 @@
+@import '../styles/mixins';
+@import '../styles/variables';
+
+.form {
+  margin: 2em 0 1.5em;
+  .inputDiv {
+    @include flexy($dir: column);
+    width: 100%;
+    margin: 1.5em 0;
+    input {
+      width: 100%;
+      background-color: $clr-light;
+      padding: 1em;
+      border: 1px solid $clr-accent;
+      border-radius: 0.5em;
+      &:focus {
+        outline: thin $clr-accent;
+        background-color: $clr-bg;
+      }
+    }
+  }
+  .buttonDiv {
+    @include flexy($dir: row);
+    gap: 1em;
+  }
+}

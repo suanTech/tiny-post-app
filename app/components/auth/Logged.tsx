@@ -12,7 +12,7 @@ type UserProps = {
 export default function Logged({ image }: UserProps) {
   return (
     <li>
-      <Button onClick={() => signOut()} className="primary">
+      <Button onClick={() => signOut()} className="login">
         Sign out
       </Button>
       <Link href="/dashboard">

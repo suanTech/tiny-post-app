@@ -1,4 +1,4 @@
-export type UserPosts = {
+export interface UserPosts {
   email: string;
   id: string;
   image: string;

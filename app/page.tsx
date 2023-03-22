@@ -4,7 +4,7 @@ import AddPost from "./components/AddPost";
 import styles from "./page.module.scss";
 import { useQuery } from "@tanstack/react-query";
 import Post from "./components/Post";
-import { PostType } from "@/app/types/Posts";
+import { PostType } from "./types/Post";
 
 // Fetch all posts
 const allPosts = async () => {

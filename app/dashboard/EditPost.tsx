@@ -6,7 +6,7 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 import styles from "../components/Post.module.scss";
 import Button from "../components/UI/Button";
-import Toggle from "./Toggle";
+import Modal from "./Modal";
 type EditProps = {
   id: string;
   avatar: string;
@@ -71,7 +71,7 @@ export default function EditPost({
           </Button>
         </div>
       </div>
-      {toggle && <Toggle deletePost={deletePost} setToggle={setToggle} />}
+      {toggle && <Modal deletePost={deletePost} setToggle={setToggle} />}
     </>
   );
 }
