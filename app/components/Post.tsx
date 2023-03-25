@@ -2,6 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import styles from './Post.module.scss'
+import Container from "./UI/Container"
 
 type PostProps = {
   avatar: string,
@@ -17,7 +18,7 @@ type PostProps = {
 }
 export default function Post({avatar, name, postTitle, id, comments}: PostProps) {
   return (
-    <div className={styles.wrapperDiv}>
+    <Container>
       <div className={styles.authorDiv}>
         <Image 
           className="round avatar.small"
@@ -36,7 +37,7 @@ export default function Post({avatar, name, postTitle, id, comments}: PostProps)
           <p>{comments?.length || 0} Comments</p>
         </Link>
       </div>
-    </div>
+    </Container>
   )
 }
 

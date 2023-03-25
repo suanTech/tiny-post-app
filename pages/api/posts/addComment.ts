@@ -13,7 +13,6 @@ export default async function handler(
       return res
         .status(401)
         .json({ message: "Please sign in to write a comment" });
-    // Get user
     const user = await prisma.user.findUnique({
       where: {
         email: session?.user?.email!
@@ -21,7 +20,6 @@ export default async function handler(
     });
     try {
       const { message, postId } = req.body
-      // Validate comment
       if (message.length > 150)
         return res.status(403).json({ message: "Maximum comment length is 150" });
       if (!message.length)

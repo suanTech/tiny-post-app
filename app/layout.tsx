@@ -1,7 +1,7 @@
-import "./styles/globals.scss";
+import "../styles/globals.scss";
 import Nav from "./components/Nav";
 import { Trispace } from "next/font/google";
-import QueryWrapper from "./lib/QueryWrapper";
+import QueryWrapper from "./components/QueryWrapper";
 
 const trispace = Trispace({
   subsets: ["latin"],

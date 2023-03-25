@@ -1,4 +1,5 @@
 import styles from "./Comment.module.scss";
+import Container from "./UI/Container";
 
 type CommentProps = {
   user: string;
@@ -9,7 +10,7 @@ type CommentProps = {
 
 export default function Comment({ user, message, time }: CommentProps) {
   return (
-    <div className={styles.wrapperDiv}>
+    <Container>
       <div className={styles.div}>
         <h3>{user}</h3>
         <p>{time}</p>
@@ -17,6 +18,6 @@ export default function Comment({ user, message, time }: CommentProps) {
       <div className={styles.commentDiv}>
         <h3>{message}</h3>
       </div>
-    </div>
+    </Container>
   );
 }

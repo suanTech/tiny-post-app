@@ -11,15 +11,14 @@ export default async function handler(
     const session = await getServerSession(req, res, authOptions)
     if(!session) return res.status(401).json({message: "Please sign in to make post"})
     const title:string = req.body.title;
-    // Get User
+
     const prismaUser = await prisma.user.findUnique({
       where: { email: session?.user?.email! }
     })
-    // Check title
+
     if(title.length > 300) return res.status(403).json({message: "Post length exceeded the limit"})
     if(!title.length) return res.status(403).json({message: "Please enter message"})
 
-    // Create Post
     try {
       const result = await prisma.post.create({
         data: {

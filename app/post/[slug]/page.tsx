@@ -2,7 +2,7 @@
 import AddComment from "@/app/components/AddComment";
 import Comment from "@/app/components/Comment";
 import Post from "@/app/components/Post";
-import { PostType } from "@/app/types/Post";
+import { PostType } from "@/types/Post";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 

@@ -4,9 +4,8 @@ import AddPost from "./components/AddPost";
 import styles from "./page.module.scss";
 import { useQuery } from "@tanstack/react-query";
 import Post from "./components/Post";
-import { PostType } from "./types/Post";
+import { PostType } from "../types/Post";
 
-// Fetch all posts
 const allPosts = async () => {
   const response = await axios.get("api/posts/getPosts");
   return response.data;

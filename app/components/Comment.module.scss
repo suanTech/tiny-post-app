@@ -1,24 +1,18 @@
-@import "../styles/mixins";
-@import "../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/variables";
 
-.wrapperDiv {
-  background-color: $clr-light;
-  padding: 1.5em;
-  margin: 1em 0;
-  border-radius: 0.5em;
-  .div {
-    @include flexy($dir: row, $algn: center);
-    gap: 1.3em;
-    h3 {
-      @include font-size($bodyS-font-sizes);
-      font-weight: bold;
-    }
-    p {
-      @include font-size($bodyXS-font-sizes);
-      color: $clr-primary;
-    }
+.div {
+  @include flexy($dir: row, $algn: center);
+  gap: 1.3em;
+  h3 {
+    @include font-size($bodyS-font-sizes);
+    font-weight: bold;
   }
-  .commentDiv {
-    margin-top: 1em;
+  p {
+    @include font-size($bodyXS-font-sizes);
+    color: $clr-primary;
   }
+}
+.commentDiv {
+  margin-top: 1em;
 }

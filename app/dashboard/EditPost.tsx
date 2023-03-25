@@ -4,8 +4,10 @@ import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
+
 import styles from "../components/Post.module.scss";
 import Button from "../components/UI/Button";
+import Container from "../components/UI/Container";
 import Modal from "./Modal";
 type EditProps = {
   id: string;
@@ -26,9 +28,7 @@ export default function EditPost({
   comments,
   id,
 }: EditProps) {
-  // Toggle
   const [toggle, setToggle] = useState(false);
-  // Delete Post
   let deleteToastID = 'delete';
   const queryClient = useQueryClient();
   const { mutate } = useMutation(
@@ -50,7 +50,7 @@ export default function EditPost({
   };
   return (
     <>
-      <div className={styles.wrapperDiv}>
+      <Container>
         <div className={styles.authorDiv}>
           <Image
             className="round avatar.small"
@@ -70,7 +70,7 @@ export default function EditPost({
             Delete
           </Button>
         </div>
-      </div>
+      </Container>
       {toggle && <Modal deletePost={deletePost} setToggle={setToggle} />}
     </>
   );

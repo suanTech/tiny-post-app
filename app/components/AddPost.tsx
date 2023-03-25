@@ -15,7 +15,6 @@ export default function AddPost() {
   const queryClient = useQueryClient();
   let toastPostID = 'hello'
 
-  // Create a post
   const { mutate } = useMutation(
     async (title:string) => await axios.post("api/posts/addPost", { title }),
     {
