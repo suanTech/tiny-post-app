@@ -11,10 +11,10 @@ export default function Comment({ user, message, time }: CommentProps) {
   return (
     <div className={styles.wrapperDiv}>
       <div className={styles.div}>
-        <h3>{'\u21B3'} {user}</h3>
+        <h3>{user}</h3>
         <p>{time}</p>
       </div>
-      <div>
+      <div className={styles.commentDiv}>
         <h3>{message}</h3>
       </div>
     </div>

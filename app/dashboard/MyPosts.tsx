@@ -14,8 +14,7 @@ export default function MyPosts() {
     queryFn: fetchUserPosts,
     queryKey: ["user-posts"],
   });
-  if(isLoading) return <p>Posts are loading</p>
-  console.log(data)
+  if(isLoading) return <p>Posts are loading...</p>
   return (
     <div>
       {data?.posts?.map((post) => (

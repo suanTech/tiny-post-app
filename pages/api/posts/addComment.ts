@@ -19,7 +19,6 @@ export default async function handler(
         email: session?.user?.email!
       },
     });
-    console.log(req.body);
     try {
       const { message, postId } = req.body
       // Validate comment
