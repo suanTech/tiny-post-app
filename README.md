@@ -1,38 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tiny Post App
 
-## Getting Started
+* live demo <a href="https://dictionary-web-app-react.netlify.app" target="_blank" rel="noopener">here</a>
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Introduction
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A Blog App built with Next.js 13, React Query, TypeScript and Sass as frontend and Prisma and PostgreSQl as backend.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Screenshots
+![screenshot](https://imgur.com/hLy3Pad.jpg)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Database Schema
+![schema](./public/schema-diagram.png)
+## 🗝️ Features
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+* Built with Next.js 13's new feature "app" directory
+* Sign in with google account using NextAuth/OAuth
+* Create database(postgreSQL) models with prisma schema
+* Implement CRUD using React Query and Axios
+ - user can Create, Read, Update and Delete their posts
+ - user can add comments to any posts
+* Error handling with useMutation hook + react hot toast
+* Use Sass modules throuout the app
+* Use Sass mixins and variables for reusable styles
+* Add notification using react hot toast
+ - loading, error, success
+* Completely responsive 🙌
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🛠️ Tech Stack
+![techStack](https://imgur.com/bULrrqm.png)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Dependencies
+* React-Hot-Toast
+* Axios
+* Prisma
+## 🔜 Future Challenge
+- [ ] Testing app 
+- [ ] Add other authO options for sign in
