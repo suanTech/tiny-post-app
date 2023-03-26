@@ -1,5 +1,5 @@
-@import './variables.scss';
-@import './mixins.scss';
+@import "./variables.scss";
+@import "./mixins.scss";
 
 *,
 *::before,
@@ -27,10 +27,10 @@ a {
   text-decoration: none;
 }
 h1 {
-  @include font-size($h1-font-sizes)
+  @include font-size($h1-font-sizes);
 }
 h2 {
-  @include font-size($h2-font-sizes)
+  @include font-size($h2-font-sizes);
 }
 h3 {
   @include font-size($h3-font-sizes);
@@ -48,9 +48,8 @@ li {
 button {
   cursor: pointer;
 }
-
 .warning {
-  color:  $clr-warning;
+  color: $clr-warning;
   font-weight: bold;
 }
 

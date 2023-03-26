@@ -52,7 +52,7 @@ export default function AddPost() {
       </div>
       <div className={styles.buttonDiv}>
         <p
-          className={`styles.p ${title.length > 300 ? 'warning' : ''}`}
+          className={`${title.length > 300 ? 'warning' : styles.p}`}
         >{`${title.length}/300`}</p>
         <Button type="submit" className="add" disabled={isDisabled}>
           Create a post

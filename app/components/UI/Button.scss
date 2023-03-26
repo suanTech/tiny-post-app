@@ -21,8 +21,8 @@ button {
   background: $clr-secondary;
   border-radius: 1em;
 }
-.delete {
-  background: transparent;
+.edit {
+  color: $clr-secondary;
   font-weight: bold;
 }
 .confirm {

@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.textarea {
+  min-height: 100px;
+  width: 100%;
+  background-color: $clr-light;
+  margin-bottom: .8em;
+  padding: 1em;
+  border: 1px solid $clr-accent;
+  border-radius: 0.5em;
+  &:focus {
+    outline: thin $clr-accent;
+    background-color: $clr-bg;
+  }
+}
