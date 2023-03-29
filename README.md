@@ -1,11 +1,11 @@
 # Tiny Post App
 
-* live demo <a href="https://dictionary-web-app-react.netlify.app" target="_blank" rel="noopener">here</a>
+* live demo <a href="https://tiny-post-app.vercel.app/" target="_blank" rel="noopener">here</a>
 
 
 ## Introduction
 
-A Blog App built with Next.js 13, React Query, TypeScript and Sass as frontend and Prisma and PostgreSQl as backend.
+A Blog App built with Next.js 13, React Query, TypeScript and Sass as frontend and Prisma and PostgreSQl(hosted on Railway) as backend.
 
 ## 🗝️ Features
 
