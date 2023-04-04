@@ -10,7 +10,7 @@ A Blog App built with Next.js 13, React Query, TypeScript and Sass as frontend a
 ## 🗝️ Features
 
 * Built with Next.js 13's new feature "app" directory
-* Sign in with google account using NextAuth/OAuth
+* Sign in with google account using NextAuth/Auth0
 * Create database(postgreSQL) models with prisma schema
 * Implement CRUD using React Query and Axios
     - user can Create, Read, Update and Delete their posts
