@@ -16,7 +16,7 @@ export default async function Dashboard() {
     redirect('/api/auth/signin')
   }
   return (
-    <main>
+    <main className={styles.main}>
       <h3 className={styles.h3}>Welcome back! {session.user?.name}</h3>
       <MyPosts/>
     </main>
