@@ -1,6 +1,8 @@
 @import '../../styles/mixins';
 
 .nav {
+  max-width: 780px;
+  margin: 0 auto;
   @include flexy($dir: row, $just: space-between);
   padding: 2em 0;
   li {
