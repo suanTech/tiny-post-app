@@ -3,7 +3,7 @@ import Nav from "./components/Nav";
 import { Trispace } from "next/font/google";
 import QueryWrapper from "./components/QueryWrapper";
 
-const trispace = Trispace({
+const font = Trispace({
   subsets: ["latin"],
   weight: ["200", "400", "600"],
 });
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={trispace.className}>
+      <body className={font.className}>
         <QueryWrapper>
           {/* @ts-expect-error Server Component */}
           <Nav />
