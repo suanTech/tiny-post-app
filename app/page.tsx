@@ -1,14 +1,12 @@
 "use client";
 import axios from "axios";
 import AddPost from "./components/AddPost";
-import styles from "./page.module.scss";
 import { useQuery } from "@tanstack/react-query";
 import Post from "./components/Post";
 import { PostType } from "../types/Post";
 
 const allPosts = async () => {
   const response = await axios.get("api/posts/getPosts");
-  console.log(response.data)
   return response.data;
 };
 
@@ -19,7 +17,7 @@ export default function Home() {
   });
   if (error) return error;
   return (
-    <main className={styles.main}>
+    <main className="main-container">
       {isLoading ? (
         <p>Loading...</p>
       ) : (

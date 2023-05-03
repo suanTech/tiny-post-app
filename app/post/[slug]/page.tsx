@@ -5,7 +5,6 @@ import Post from "@/app/components/Post";
 import { PostType } from "@/types/Post";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import styles from '../../page.module.scss';
 
 type URL = {
   params: {
@@ -23,27 +22,32 @@ export default function PostDetail(url: URL) {
     queryKey: ["detail-post"],
     queryFn: () => fetchPostDetail(url.params.slug),
   });
-  if (isLoading) return "Loading...";
   return (
-    <main className={styles.main}>
-      <Post
-        id={data?.id || ""}
-        postTitle={data?.title || ""}
-        avatar={data?.user.image || ""}
-        name={data?.user.name || ""}
-        comments={data?.comments}
-      />
-      <AddComment id={data?.id || ""}/>
-      <h3>Comments</h3>
-      {data?.comments.map(comment => (
-        <Comment 
-          id={comment.id}
-          key={comment.id}
-          message={comment.message}
-          user={comment.user.name}
-          time={comment.createdAt}
-        />
-      ))}
+    <main className="main-container">
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          <Post
+            id={data?.id || ""}
+            postTitle={data?.title || ""}
+            avatar={data?.user.image || ""}
+            name={data?.user.name || ""}
+            comments={data?.comments}
+          />
+          <AddComment id={data?.id || ""} />
+          <h3>Comments</h3>
+          {data?.comments.map((comment) => (
+            <Comment
+              id={comment.id}
+              key={comment.id}
+              message={comment.message}
+              user={comment.user.name}
+              time={comment.createdAt}
+            />
+          ))}
+        </>
+      )}
     </main>
   );
 }

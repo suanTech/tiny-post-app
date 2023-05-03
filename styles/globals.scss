@@ -52,6 +52,10 @@ button {
   color: $clr-warning;
   font-weight: bold;
 }
+.main-container {
+  max-width: 780px;
+  margin: 0 auto;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
