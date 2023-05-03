@@ -5,6 +5,7 @@ import Post from "@/app/components/Post";
 import { PostType } from "@/types/Post";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import styles from '../../page.module.scss';
 
 type URL = {
   params: {
@@ -24,7 +25,7 @@ export default function PostDetail(url: URL) {
   });
   if (isLoading) return "Loading...";
   return (
-    <div>
+    <main className={styles.main}>
       <Post
         id={data?.id || ""}
         postTitle={data?.title || ""}
@@ -43,6 +44,6 @@ export default function PostDetail(url: URL) {
           time={comment.createdAt}
         />
       ))}
-    </div>
+    </main>
   );
 }
