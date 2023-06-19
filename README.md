@@ -67,7 +67,7 @@ on `next/image`, hostname "lh3.googleusercontent.com" is not configured under im
 
 **Problem**
 
-(According to Next.js docs,) One of your pages that leverages the next/image component, passed a src value that uses a hostname in the URL that isn't defined in the images.remotePatterns in next.config.js.
+(According to Next.js docs,) One of your pages that leverages the next/image component, passed a src value that uses a hostname in the URL that isn't defined in the `images.remotePatterns` in `next.config.js`.
 
 **Solution**
 Update next.config.js file(add image domains to be directed)
@@ -92,10 +92,10 @@ Type error: Type 'string | string[] | undefined' is not assignable to type 'stri
 **Problem**
 
 The web address protocols allows assigning of multiple query names with the same name. These then get passed as a string[] instead of a single string.
-E.g, ?value=one&value=two. Therefore it should be up to the app to decide which value to accept if it's only going to make use of one string.
+E.g, `?value=one&value=two.` Therefore it should be up to the app to decide which value to accept if it's only going to make use of one string.
 
 **Solution**
-Type narrowing using Array.isArray checking
+Type narrowing using `Array.isArray` checking
 ```ts
 const postId = Array.isArray(req.query.details) ? req.query.details[0] : req.query.details
       const data = await prisma.post.findUnique({
